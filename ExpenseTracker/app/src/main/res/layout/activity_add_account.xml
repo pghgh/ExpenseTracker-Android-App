@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.accounts.AddAccountActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addAccountToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/add_account" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="7dp"
+                android:gravity="center"
+                android:text="@string/name"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                tools:text="Account1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="7dp"
+                android:gravity="center"
+                android:text="@string/description"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="7dp"
+                android:gravity="center"
+                android:text="@string/balance"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="numberSigned|numberDecimal"
+                android:minHeight="48dp"
+                tools:text="500" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="7dp"
+                android:gravity="center"
+                android:text="@string/account_type"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerAccountType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tvNewAccountType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="7dp"
+                android:gravity="center"
+                android:text="@string/new_account_type"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/etAccountType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:visibility="invisible"
+                tools:text="CASH" />
+
+            <Button
+                android:id="@+id/addActivityBtnAddAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/add_account" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

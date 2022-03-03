@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.transaction.TransactionFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center|start"
+                            android:text="@string/select_transaction_type"
+                            android:textSize="20sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_groupTransaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/expenseRadio"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/expense" />
+
+                                <RadioButton
+                                    android:id="@+id/incomeRadio"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/income" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center|start"
+                            android:text="@string/amount"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/etTransactionAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:minHeight="48dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center"
+                            android:text="@string/select_category"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/etTransactionCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:minHeight="48dp"
+                            android:visibility="gone"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <Spinner
+                            android:id="@+id/spinnerCategoryTransaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:minHeight="48dp"
+                            android:spinnerMode="dropdown"
+                            app:layout_constraintTop_toBottomOf="@+id/text_alert" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center|start"
+                            android:text="Date"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/etTransactionDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:ems="10"
+                            android:hint="@string/date_format"
+                            android:inputType="date|text"
+                            android:minHeight="48dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center|start"
+                            android:text="Account"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerAccountsTransaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:minHeight="48dp"
+                            app:layout_constraintTop_toBottomOf="@+id/text_alert"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <EditText
+                            android:id="@+id/etTransactionAccountName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:minHeight="48dp"
+                            android:visibility="gone"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center|start"
+                            android:text="@string/description"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/etTransactionDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:minHeight="48dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <Button
+                            android:id="@+id/addActivityBtnAddTransaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="@string/add_transaction" />
+
+                </LinearLayout>
+        </ScrollView>
+
+</FrameLayout>

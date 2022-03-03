@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.reports.reportViewFragments.LineGraphFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/trans_list_chips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/trans_list_daily_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:gravity="center"
+                android:text="@string/daily" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/trans_list_weekly_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:gravity="center"
+                android:text="@string/weekly" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/trans_list_monthly_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:gravity="center"
+                android:text="@string/monthly" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/trans_list_custopm_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:gravity="center"
+                android:text="@string/custom" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:id="@+id/customLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <EditText
+                android:id="@+id/trans_lit_ed_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/from"
+                android:inputType="date|text"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/trans_lit_ed_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/to"
+                android:inputType="date|text"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/trans_list_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:capitalize="none"
+                android:text="@android:string/ok"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:iconPadding="3dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/trans_list_income_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="@string/incomes" />
+
+            <CheckBox
+                android:id="@+id/trans_list_expense_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="@string/expenses" />
+        </LinearLayout>
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/line_graph_elem"
+            android:layout_width="match_parent"
+            android:layout_height="410dip" />
+
+    </LinearLayout>
+
+</FrameLayout>

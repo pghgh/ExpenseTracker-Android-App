@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.accounts.EditAccountActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/EditAccountToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/edit_account" />
+
+    <TextView
+        android:id="@+id/editTvAccountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center"
+        android:text="@string/name"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editEtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:text="Account1" />
+
+    <TextView
+        android:id="@+id/editTvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="7dp"
+        android:gravity="center"
+        android:text="@string/description"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editEtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/editTvBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="7dp"
+        android:gravity="center"
+        android:text="@string/balance"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editEtBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp"
+        tools:text="500" />
+
+    <TextView
+        android:id="@+id/editTVAccountType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="7dp"
+        android:gravity="center"
+        android:text="@string/account_type"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editEtAccountType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:text="CASH" />
+
+    <Button
+        android:id="@+id/editBtnEditAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/edit_account" />
+
+</LinearLayout>
